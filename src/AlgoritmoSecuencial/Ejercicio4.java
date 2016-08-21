@@ -5,6 +5,8 @@
  */
 package AlgoritmoSecuencial;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aldair
@@ -16,6 +18,9 @@ public class Ejercicio4 extends javax.swing.JFrame {
      */
     public Ejercicio4() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        txtCantidad.requestFocusInWindow();
+        
     }
 
     /**
@@ -27,21 +32,167 @@ public class Ejercicio4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtCantidad = new javax.swing.JTextField();
+        txtMontoR = new javax.swing.JTextField();
+        txtCuotaI = new javax.swing.JTextField();
+        txtCuotasR = new javax.swing.JTextField();
+        cmdCalcular = new javax.swing.JButton();
+        cdmBorrar = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        txtCantidadT = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setBackground(new java.awt.Color(0, 204, 255));
+        jButton1.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
+        jButton1.setText("SALIR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText("Procesador De Datos");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 240, 30));
+
+        jLabel3.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
+        jLabel3.setText("Cantidad de m2");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 100, 30));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
+        jLabel4.setText("Monto Restante");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
+        jLabel5.setText("Cuota Inicial");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
+        jLabel6.setText("Cuotas Restante");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, -1, -1));
+
+        txtCantidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCantidadKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 40, 30));
+        jPanel1.add(txtMontoR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 160, 30));
+        jPanel1.add(txtCuotaI, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 150, 30));
+        jPanel1.add(txtCuotasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 160, 30));
+
+        cmdCalcular.setText("Calcular");
+        cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdCalcularActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
+
+        cdmBorrar.setText("Borrar");
+        cdmBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cdmBorrarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cdmBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 70, -1));
+
+        jLabel7.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
+        jLabel7.setText("Cantidad Total");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+        jPanel1.add(txtCantidadT, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 180, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\aldair\\Desktop\\istock_000019699924small.jpg")); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 320));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
+        
+        String Can;
+        
+        double CAN, res1, res2, res3, res4;
+        
+        if(txtCantidad.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null,"por favor indique la cantidad de metro que compro", "ERROR",JOptionPane.WARNING_MESSAGE);
+        }else{
+        
+        try{    
+        CAN=Double.parseDouble(txtCantidad.getText());
+        
+        res1=CAN*80000;
+        res2=(res1*0.35);
+        res3=(res1-(res2));
+        res4=(res3/12);
+        
+        txtCantidadT.setText(""+res1);
+        txtMontoR.setText(""+res3);
+        txtCuotaI.setText(""+res2);
+        txtCuotasR.setText(""+res4);
+       
+    }//GEN-LAST:event_cmdCalcularActionPerformed
+
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null,"la cantidad ingresa esinvalida, por favor corregir","ERROR",JOptionPane.WARNING_MESSAGE);
+        }
+        }
+    }
+    private void cdmBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdmBorrarActionPerformed
+        
+        txtCantidad.setText("");
+        txtMontoR.setText("");
+        txtCuotaI.setText("");
+        txtCuotasR.setText("");
+        txtCantidadT.setText("");
+        
+       txtCantidad.requestFocusInWindow();
+       
+    }//GEN-LAST:event_cdmBorrarActionPerformed
+
+    private void txtCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadKeyTyped
+        char c=evt.getKeyChar();
+        
+        if(!Character.isDigit(evt.getKeyChar())&& evt.getKeyChar() != '.'){
+            getToolkit();
+            
+            evt.consume();
+        }
+        
+    }//GEN-LAST:event_txtCantidadKeyTyped
 
     /**
      * @param args the command line arguments
@@ -79,5 +230,21 @@ public class Ejercicio4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cdmBorrar;
+    private javax.swing.JButton cmdCalcular;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txtCantidad;
+    private javax.swing.JTextField txtCantidadT;
+    private javax.swing.JTextField txtCuotaI;
+    private javax.swing.JTextField txtCuotasR;
+    private javax.swing.JTextField txtMontoR;
     // End of variables declaration//GEN-END:variables
 }
