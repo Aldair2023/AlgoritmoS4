@@ -96,6 +96,8 @@ public class Ejercicio4 extends javax.swing.JFrame {
         jPanel1.add(txtCuotaI, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 150, 30));
         jPanel1.add(txtCuotasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 160, 30));
 
+        cmdCalcular.setBackground(new java.awt.Color(0, 0, 102));
+        cmdCalcular.setForeground(new java.awt.Color(255, 255, 255));
         cmdCalcular.setText("Calcular");
         cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +106,8 @@ public class Ejercicio4 extends javax.swing.JFrame {
         });
         jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
 
+        cdmBorrar.setBackground(new java.awt.Color(0, 0, 102));
+        cdmBorrar.setForeground(new java.awt.Color(255, 255, 255));
         cdmBorrar.setText("Borrar");
         cdmBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +195,6 @@ public class Ejercicio4 extends javax.swing.JFrame {
             
             evt.consume();
         }
-        
     }//GEN-LAST:event_txtCantidadKeyTyped
 
     /**
