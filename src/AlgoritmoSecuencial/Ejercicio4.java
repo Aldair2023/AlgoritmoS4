@@ -92,8 +92,14 @@ public class Ejercicio4 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 40, 30));
+
+        txtMontoR.setEditable(false);
         jPanel1.add(txtMontoR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 160, 30));
+
+        txtCuotaI.setEditable(false);
         jPanel1.add(txtCuotaI, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 150, 30));
+
+        txtCuotasR.setEditable(false);
         jPanel1.add(txtCuotasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 160, 30));
 
         cmdCalcular.setBackground(new java.awt.Color(0, 0, 102));
@@ -119,6 +125,8 @@ public class Ejercicio4 extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
         jLabel7.setText("Cantidad Total");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+
+        txtCantidadT.setEditable(false);
         jPanel1.add(txtCantidadT, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 180, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\aldair\\Desktop\\istock_000019699924small.jpg")); // NOI18N
@@ -170,8 +178,8 @@ public class Ejercicio4 extends javax.swing.JFrame {
        
     }//GEN-LAST:event_cmdCalcularActionPerformed
 
-        catch(Exception e){
-            JOptionPane.showMessageDialog(null,"la cantidad ingresa esinvalida, por favor corregir","ERROR",JOptionPane.WARNING_MESSAGE);
+        catch(Exception d){
+            JOptionPane.showMessageDialog(null,"la cantidad ingresa es invalida, por favor corregir","ERROR",JOptionPane.WARNING_MESSAGE);
         }
         }
     }
@@ -188,7 +196,6 @@ public class Ejercicio4 extends javax.swing.JFrame {
     }//GEN-LAST:event_cdmBorrarActionPerformed
 
     private void txtCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadKeyTyped
-        char c=evt.getKeyChar();
         
         if(!Character.isDigit(evt.getKeyChar())&& evt.getKeyChar() != '.'){
             getToolkit();
